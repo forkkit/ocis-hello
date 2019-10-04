@@ -38,7 +38,7 @@ Configuration We provide overall three different variants of configuration. The 
       <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://owncloud.github.io/ocis-hello/building/</guid>
-      <description>As this project is built with Go and NodeJS, so you need to install that first. The installation of Go and NodeJS is out of the scope of this document, please follow the official documentation for Go, NodeJS and Yarn. After the installation of the required tools you need to get the sources:
+      <description>As this project is built with Go and NodeJS, so you need to install that first. The installation of Go and NodeJS is out of the scope of this document, please follow the official documentation for Go, NodeJS and Yarn, to build this project you have to install Go &amp;gt;= v1.12. After the installation of the required tools you need to get the sources:
 git clone https://github.com/owncloud/ocis-hello.git cd ocis-hello All required tool besides Go itself and make are bundled or getting automatically installed within the GOPATH.</description>
     </item>
     
