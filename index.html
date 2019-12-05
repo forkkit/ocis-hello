@@ -10,346 +10,11 @@
 			ownCloud Infinite Scale: Hello
 		</title>
 
-		<meta name="description" content="Example service for Reva/oCIS">
+		<meta name="description" content="Example service for oCIS">
 		<meta name="author" content="ownCloud GmbH">
 
 		<link rel="stylesheet" href="syntax.css" />
-
-<style type="text/css">
-	body,
-	div,
-	dl,
-	dt,
-	dd,
-	ul,
-	ol,
-	li,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	pre,
-	form,
-	fieldset,
-	input,
-	textarea,
-	p,
-	blockquote,
-	th,
-	td {
-		margin: 0;
-		padding: 0;
-	}
-
-	* {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-
-	:before,
-	:after {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-
-	img,
-	object,
-	embed {
-		max-width: 100%;
-		height: auto;
-	}
-
-	object,
-	embed {
-		height: 100%;
-	}
-
-	img {
-		margin: 1.25% 0;
-		-ms-interpolation-mode: bicubic;
-	}
-
-	html {
-		background-color: #F0F1F3;
-		padding: 2%;
-	}
-
-	body {
-		font-size: 16px;
-		line-height: 1.6;
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-		color: #242424;
-		max-width: 800px;
-		margin: 5% auto;
-	}
-
-	body::after {
-		clear: both;
-		content: "";
-		display: table;
-	}
-
-	header {
-		margin-bottom: 8%;
-	}
-
-	footer {
-		text-align: center;
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h1 a {
-		color: #263A48;
-		font-weight: 500;
-		text-decoration: none;
-	}
-
-	h1,
-	h2 {
-		font-size: 36px;
-		padding-bottom: 0.3em;
-		margin-bottom: 0.4em;
-		border-bottom: 1px solid #eee
-	}
-
-	h2 {
-		font-size: 22px;
-		padding-bottom: 0.6em;
-		margin-bottom: 0.6em;
-		margin-top: 2.5em;
-	}
-
-	h3 {
-		font-size: 18px;
-		margin-bottom: 0.3em;
-	}
-
-	h1 small a {
-		color: #98999C;
-		font-size: 15px;
-		font-weight: normal;
-		float: right;
-		position: absolute;
-		top: 15px;
-		right: 20px;
-	}
-
-	section {
-		background: #fff;
-		margin-bottom: 1%;
-		position: relative;
-		padding: 6% 8%;
-	}
-
-	blockquote {
-		border-left: 3px solid #d54e21;
-		font-size: 16px;
-		padding: 0 0 0 20px;
-		color: #d54e21;
-	}
-
-	blockquote a {
-		color: #d54e21;
-		font-weight: 500;
-	}
-
-	blockquote code {
-		color: #d54e21;
-	}
-
-	.highlight pre {
-		padding: 10px;
-	}
-
-	.highlight {
-		margin-bottom: 4%;
-	}
-
-	a {
-		color: #1e8cbe;
-		text-decoration: underline;
-	}
-
-	a:hover {
-		color: #d54e21;
-	}
-
-	ul {
-		list-style: none;
-	}
-
-	ol {
-		list-style: number;
-	}
-
-	ol li {
-		color: #98999C;
-		margin-bottom: 5px;
-	}
-
-	ol li:last-child {
-		margin-bottom: 0;
-	}
-
-	p,
-	ul,
-	ol,
-	blockquote  {
-		margin-bottom: 4%;
-	}
-
-	ul ul {
-		padding-top: 0;
-		margin-bottom: 0;
-		margin-left: 4%;
-	}
-
-	ul ul li:before {
-		content: '-';
-		display: inline-block;
-		padding-right: 2%;
-	}
-
-	ul.col-2 {
-		color: #98999C;
-		-webkit-column-count: 2;
-		-moz-column-count: 2;
-		column-count: 2;
-		-webkit-column-gap: 20px;
-		-moz-column-gap: 20px;
-		column-gap: 20px;
-	}
-
-	dl dt {
-		font-weight: bold;
-	}
-
-	dl dd {
-		padding-left: 10px;
-	}
-
-	@media screen and (min-width: 500px) {
-		ul.col-2 {
-			-webkit-column-count: 3;
-			-moz-column-count: 3;
-			column-count: 3;
-			-webkit-column-gap: 20px;
-			-moz-column-gap: 20px;
-			column-gap: 20px;
-		}
-	}
-
-	nav {
-		background: #F0F1F3;
-		min-width: 215px;
-		margin-bottom: 5px;
-		margin-top: 15px;
-	}
-
-	nav:first-of-type a {
-		color: #d54e21;
-		border-radius: 0;
-	}
-
-	nav:first-of-type a:hover {
-		color: #d54e21;
-	}
-
-	nav:first-of-type a:before {
-		background-color: #d54e21;
-	}
-
-	nav.affix {
-		position: fixed;
-		top: 20px;
-	}
-
-	nav.affix-bottom {
-		position: absolute;
-	}
-
-	nav a {
-		border-radius: 3px;
-		font-size: 15px;
-		display: block;
-		cursor: pointer;
-		font-weight: 500;
-		position: relative;
-		text-decoration: none;
-		padding: 10px 12px;
-		width: 100%;
-		padding-right: 3px;
-		border-bottom: 2px solid #fff;
-	}
-
-	nav a:before {
-		content: '';
-		width: 4px;
-		display: block;
-		left: 0;
-		position: absolute;
-		height: 100%;
-		display: none;
-		background: #1e8cbe;
-		top: 0;
-	}
-
-	nav a:hover {
-		background-color: #E6E8EA;
-		color: #1e8cbe;
-		text-decoration: underline;
-	}
-
-	nav a:hover:before {
-		display: block;
-	}
-
-	nav a:last-of-type {
-		border-bottom: none;
-	}
-
-	.gist {
-		margin-top: 5.1%;
-		margin-bottom: 5%;
-	}
-
-	@media screen and (max-width: 1050px) {
-		body {
-			margin: 0 auto;
-		}
-	}
-
-	@media screen and (max-width: 767px) {
-		header span {
-			display: none;
-		}
-
-		h1 {
-			font-size: 26px;
-		}
-
-		h2 {
-			font-size: 20px;
-		}
-	}
-
-	@media screen and (max-width: 514px) {
-		p,
-		ul,
-		ol,
-		blockquote  {
-			margin-bottom: 8%;
-		}
-	}
-</style>
+<link rel="stylesheet" href="styles.css" />
 
 	</head>
 
@@ -361,7 +26,7 @@
 				</h1>
 
 				<p>
-					Example service for Reva/oCIS
+					Example service for oCIS
 				</p>
 			</header>
 
@@ -439,6 +104,9 @@
 <h5 id="global">Global</h5>
 
 <dl>
+<dt>HELLO_CONFIG_FILE<br /></dt>
+<dd>Path to config file, empty default value<br />
+<br /></dd>
 <dt>HELLO_LOG_LEVEL<br /></dt>
 <dd>Set logging level, defaults to <code>info</code><br />
 <br /></dd>
@@ -453,6 +121,21 @@
 <h5 id="server">Server</h5>
 
 <dl>
+<dt>HELLO_TRACING_ENABLED<br /></dt>
+<dd>Enable sending traces, defaults to <code>false</code><br />
+<br /></dd>
+<dt>HELLO_TRACING_TYPE<br /></dt>
+<dd>Tracing backend type, defaults to <code>jaeger</code><br />
+<br /></dd>
+<dt>HELLO_TRACING_ENDPOINT<br /></dt>
+<dd>Endpoint for the agent, empty default value<br />
+<br /></dd>
+<dt>HELLO_TRACING_COLLECTOR<br /></dt>
+<dd>Endpoint for the collector, empty default value<br />
+<br /></dd>
+<dt>HELLO_TRACING_SERVICE<br /></dt>
+<dd>Service name for tracing, defaults to <code>hello</code><br />
+<br /></dd>
 <dt>HELLO_DEBUG_ADDR<br /></dt>
 <dd>Address to bind debug server, defaults to <code>0.0.0.0:8390</code><br />
 <br /></dd>
@@ -462,11 +145,14 @@
 <dt>HELLO_DEBUG_PPROF<br /></dt>
 <dd>Enable pprof debugging, defaults to <code>false</code><br />
 <br /></dd>
+<dt>HELLO_DEBUG_ZPAGES<br /></dt>
+<dd>Enable zpages debugging, defaults to <code>false</code><br />
+<br /></dd>
 <dt>HELLO_HTTP_ADDR<br /></dt>
 <dd>Address to bind http server, defaults to <code>0.0.0.0:8380</code><br />
 <br /></dd>
-<dt>HELLO_HTTP_ROOT<br /></dt>
-<dd>Root path for http endpoint, defaults to <code>/</code><br />
+<dt>HELLO_GRPC_ADDR<br /></dt>
+<dd>Address to bind grpc server, defaults to <code>0.0.0.0:8381</code><br />
 <br /></dd>
 <dt>HELLO_ASSET_PATH<br /></dt>
 <dd>Path to custom assets, empty default value<br />
@@ -488,6 +174,9 @@
 <h5 id="global-1">Global</h5>
 
 <dl>
+<dt>&ndash;config-file<br /></dt>
+<dd>Path to config file, empty default value<br />
+<br /></dd>
 <dt>&ndash;log-level<br /></dt>
 <dd>Set logging level, defaults to <code>info</code><br />
 <br /></dd>
@@ -502,6 +191,21 @@
 <h5 id="server-1">Server</h5>
 
 <dl>
+<dt>&ndash;tracing-enabled<br /></dt>
+<dd>Enable sending traces, defaults to <code>false</code><br />
+<br /></dd>
+<dt>&ndash;tracing-type<br /></dt>
+<dd>Tracing backend type, defaults to <code>jaeger</code><br />
+<br /></dd>
+<dt>&ndash;tracing-endpoint<br /></dt>
+<dd>Endpoint for the agent, empty default value<br />
+<br /></dd>
+<dt>&ndash;tracing-collector<br /></dt>
+<dd>Endpoint for the collector, empty default value<br />
+<br /></dd>
+<dt>&ndash;tracing-service<br /></dt>
+<dd>Service name for tracing, defaults to <code>hello</code><br />
+<br /></dd>
 <dt>&ndash;debug-addr<br /></dt>
 <dd>Address to bind debug server, defaults to <code>0.0.0.0:8390</code><br />
 <br /></dd>
@@ -511,11 +215,14 @@
 <dt>&ndash;debug-pprof<br /></dt>
 <dd>Enable pprof debugging, defaults to <code>false</code><br />
 <br /></dd>
+<dt>&ndash;debug-zpages<br /></dt>
+<dd>Enable zpages debugging, defaults to <code>false</code><br />
+<br /></dd>
 <dt>&ndash;http-addr<br /></dt>
 <dd>Address to bind http server, defaults to <code>0.0.0.0:8380</code><br />
 <br /></dd>
-<dt>&ndash;http-root<br /></dt>
-<dd>Root path for http endpoint, defaults to <code>/</code><br />
+<dt>&ndash;grpc-addr<br /></dt>
+<dd>Address to bind grpc server, defaults to <code>0.0.0.0:8381</code><br />
 <br /></dd>
 <dt>&ndash;asset-path<br /></dt>
 <dd>Path to custom assets, empty default value<br />
