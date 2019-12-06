@@ -137,7 +137,7 @@
 <dd>Service name for tracing, defaults to <code>hello</code><br />
 <br /></dd>
 <dt>HELLO_DEBUG_ADDR<br /></dt>
-<dd>Address to bind debug server, defaults to <code>0.0.0.0:9110</code><br />
+<dd>Address to bind debug server, defaults to <code>0.0.0.0:9109</code><br />
 <br /></dd>
 <dt>HELLO_DEBUG_TOKEN<br /></dt>
 <dd>Token to grant metrics access, empty default value<br />
@@ -163,7 +163,7 @@
 
 <dl>
 <dt>HELLO_DEBUG_ADDR<br /></dt>
-<dd>Address to debug endpoint, defaults to <code>0.0.0.0:9110</code><br />
+<dd>Address to debug endpoint, defaults to <code>0.0.0.0:9109</code><br />
 <br /></dd>
 </dl>
 
@@ -207,7 +207,7 @@
 <dd>Service name for tracing, defaults to <code>hello</code><br />
 <br /></dd>
 <dt>&ndash;debug-addr<br /></dt>
-<dd>Address to bind debug server, defaults to <code>0.0.0.0:9110</code><br />
+<dd>Address to bind debug server, defaults to <code>0.0.0.0:9109</code><br />
 <br /></dd>
 <dt>&ndash;debug-token<br /></dt>
 <dd>Token to grant metrics access, empty default value<br />
@@ -233,7 +233,7 @@
 
 <dl>
 <dt>&ndash;debug-addr<br /></dt>
-<dd>Address to debug endpoint, defaults to <code>0.0.0.0:9110</code><br />
+<dd>Address to debug endpoint, defaults to <code>0.0.0.0:9109</code><br />
 <br /></dd>
 </dl>
 
@@ -259,7 +259,7 @@
 
 <h3 id="metrics">Metrics</h3>
 
-<p>This service provides some <a href="https://prometheus.io/">Prometheus</a> metrics through the debug endpoint, you can optionally secure the metrics endpoint by some random token, which got to be configured through one of the flag <code>--debug-token</code> or the environment variable <code>HELLO_DEBUG_TOKEN</code> mentioned above. By default the metrics endpoint is bound to <code>http://0.0.0.0:9110/metrics</code>.</p>
+<p>This service provides some <a href="https://prometheus.io/">Prometheus</a> metrics through the debug endpoint, you can optionally secure the metrics endpoint by some random token, which got to be configured through one of the flag <code>--debug-token</code> or the environment variable <code>HELLO_DEBUG_TOKEN</code> mentioned above. By default the metrics endpoint is bound to <code>http://0.0.0.0:9109/metrics</code>.</p>
 
 <dl>
 <dt>go_gc_duration_seconds<br /></dt>
