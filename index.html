@@ -83,7 +83,7 @@
 
 				<h3 id="installation">Installation</h3>
 
-<p>So far we are offering two different variants for the installation. You can choose between <a href="docker">Docker</a> or pre-built binaries which are stored on our download mirrors and GitHub releases. Maybe we will also provide system packages for the major distributions later if we see the need for it.</p>
+<p>So far we are offering two different variants for the installation. You can choose between <a href="https://www.docker.com/">Docker</a> or pre-built binaries which are stored on our download mirrors and GitHub releases. Maybe we will also provide system packages for the major distributions later if we see the need for it.</p>
 
 <h4 id="docker">Docker</h4>
 
@@ -137,7 +137,7 @@
 <dd>Service name for tracing, defaults to <code>hello</code><br />
 <br /></dd>
 <dt>HELLO_DEBUG_ADDR<br /></dt>
-<dd>Address to bind debug server, defaults to <code>0.0.0.0:8390</code><br />
+<dd>Address to bind debug server, defaults to <code>0.0.0.0:9110</code><br />
 <br /></dd>
 <dt>HELLO_DEBUG_TOKEN<br /></dt>
 <dd>Token to grant metrics access, empty default value<br />
@@ -149,10 +149,10 @@
 <dd>Enable zpages debugging, defaults to <code>false</code><br />
 <br /></dd>
 <dt>HELLO_HTTP_ADDR<br /></dt>
-<dd>Address to bind http server, defaults to <code>0.0.0.0:8380</code><br />
+<dd>Address to bind http server, defaults to <code>0.0.0.0:9105</code><br />
 <br /></dd>
 <dt>HELLO_GRPC_ADDR<br /></dt>
-<dd>Address to bind grpc server, defaults to <code>0.0.0.0:8381</code><br />
+<dd>Address to bind grpc server, defaults to <code>0.0.0.0:9106</code><br />
 <br /></dd>
 <dt>HELLO_ASSET_PATH<br /></dt>
 <dd>Path to custom assets, empty default value<br />
@@ -163,7 +163,7 @@
 
 <dl>
 <dt>HELLO_DEBUG_ADDR<br /></dt>
-<dd>Address to debug endpoint, defaults to <code>0.0.0.0:8390</code><br />
+<dd>Address to debug endpoint, defaults to <code>0.0.0.0:9110</code><br />
 <br /></dd>
 </dl>
 
@@ -207,7 +207,7 @@
 <dd>Service name for tracing, defaults to <code>hello</code><br />
 <br /></dd>
 <dt>&ndash;debug-addr<br /></dt>
-<dd>Address to bind debug server, defaults to <code>0.0.0.0:8390</code><br />
+<dd>Address to bind debug server, defaults to <code>0.0.0.0:9110</code><br />
 <br /></dd>
 <dt>&ndash;debug-token<br /></dt>
 <dd>Token to grant metrics access, empty default value<br />
@@ -219,10 +219,10 @@
 <dd>Enable zpages debugging, defaults to <code>false</code><br />
 <br /></dd>
 <dt>&ndash;http-addr<br /></dt>
-<dd>Address to bind http server, defaults to <code>0.0.0.0:8380</code><br />
+<dd>Address to bind http server, defaults to <code>0.0.0.0:9105</code><br />
 <br /></dd>
 <dt>&ndash;grpc-addr<br /></dt>
-<dd>Address to bind grpc server, defaults to <code>0.0.0.0:8381</code><br />
+<dd>Address to bind grpc server, defaults to <code>0.0.0.0:9106</code><br />
 <br /></dd>
 <dt>&ndash;asset-path<br /></dt>
 <dd>Path to custom assets, empty default value<br />
@@ -233,13 +233,13 @@
 
 <dl>
 <dt>&ndash;debug-addr<br /></dt>
-<dd>Address to debug endpoint, defaults to <code>0.0.0.0:8390</code><br />
+<dd>Address to debug endpoint, defaults to <code>0.0.0.0:9110</code><br />
 <br /></dd>
 </dl>
 
 <h4 id="configuration-file">Configuration file</h4>
 
-<p>So far we support the file formats <code>JSON</code> and <code>YAML</code>, if you want to get a full example configuration just take a look at <a href="repo">our repository</a>, there you can always see the latest configuration format. These example configurations include all available options and the default values. The configuration file will be automatically loaded if it&rsquo;s placed at <code>/etc/ocis/hello.yml</code>, <code>${HOME}/.ocis/hello.yml</code> or <code>$(pwd)/config/hello.yml</code>.</p>
+<p>So far we support the file formats <code>JSON</code> and <code>YAML</code>, if you want to get a full example configuration just take a look at <a href="https://github.com/owncloud/ocis-hello/tree/master/config">our repository</a>, there you can always see the latest configuration format. These example configurations include all available options and the default values. The configuration file will be automatically loaded if it&rsquo;s placed at <code>/etc/ocis/hello.yml</code>, <code>${HOME}/.ocis/hello.yml</code> or <code>$(pwd)/config/hello.yml</code>.</p>
 
 <h3 id="usage">Usage</h3>
 
@@ -259,7 +259,7 @@
 
 <h3 id="metrics">Metrics</h3>
 
-<p>This service provides some <a href="prom">Prometheus</a> metrics through the debug endpoint, you can optionally secure the metrics endpoint by some random token, which got to be configured through one of the flag <code>--debug-token</code> or the environment variable <code>HELLO_DEBUG_TOKEN</code> mentioned above. By default the metrics endpoint is bound to <code>http://0.0.0.0:8390/metrics</code>.</p>
+<p>This service provides some <a href="https://prometheus.io/">Prometheus</a> metrics through the debug endpoint, you can optionally secure the metrics endpoint by some random token, which got to be configured through one of the flag <code>--debug-token</code> or the environment variable <code>HELLO_DEBUG_TOKEN</code> mentioned above. By default the metrics endpoint is bound to <code>http://0.0.0.0:9110/metrics</code>.</p>
 
 <dl>
 <dt>go_gc_duration_seconds<br /></dt>
@@ -356,11 +356,7 @@
 <dd>Current number of scrapes being served<br />
 <br /></dd>
 <dt>promhttp_metric_handler_requests_total<br /></dt>
-<dd>Total number of scrapes by HTTP status code<br />
-<br />
-<br />
-<br />
-<br /></dd>
+<dd>Total number of scrapes by HTTP status code<br /></dd>
 </dl>
 
 			</section>
@@ -378,7 +374,7 @@
 					</small>
 				</h2>
 
-				<p>As this project is built with Go and NodeJS, so you need to install that first. The installation of Go and NodeJS is out of the scope of this document, please follow the official documentation for <a href="golang">Go</a>, <a href="nodejs">NodeJS</a> and <a href="yarn">Yarn</a>, to build this project you have to install Go &gt;= v1.12. After the installation of the required tools you need to get the sources:</p>
+				<p>As this project is built with Go and NodeJS, so you need to install that first. The installation of Go and NodeJS is out of the scope of this document, please follow the official documentation for <a href="https://golang.org/doc/install">Go</a>, <a href="https://nodejs.org/en/download/package-manager/">NodeJS</a> and <a href="https://yarnpkg.com/lang/en/docs/install/">Yarn</a>, to build this project you have to install Go &gt;= v1.12. After the installation of the required tools you need to get the sources:</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">git clone https://github.com/owncloud/ocis-hello.git
 cd ocis-hello</code></pre></div>
@@ -414,7 +410,7 @@ make build</code></pre></div>
 					</small>
 				</h2>
 
-				This project is licensed under the <a href="license">Apache 2.0</a> license. For the license of the used libraries you have to check the respective sources.
+				This project is licensed under the <a href="https://github.com/owncloud/ocis-hello/blob/master/LICENSE">Apache 2.0</a> license. For the license of the used libraries you have to check the respective sources.
 			</section>
 		
 	</body>
